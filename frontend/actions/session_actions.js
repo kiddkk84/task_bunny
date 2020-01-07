@@ -22,13 +22,18 @@ export const receiveErrors = errors => ({
 
 export const signup = user => dispatch => {
     return SessionAPIUtil.signup(user)
-    .then(user => dispatch(receiveCurrentUser(user)))
+        .then(
+            user => dispatch(receiveCurrentUser(user)), error => 
+            dispatch(receiveErrors(error.responseJSON))
+            )
 };
 
 
 export const login = user => dispatch => {
     return SessionAPIUtil.login(user)
-    .then(user => dispatch(receiveCurrentUser(user)))
+        .then(user => dispatch(receiveCurrentUser(user)), error =>
+            dispatch(receiveErrors(error.responseJSON))
+            )
 };
 
 
