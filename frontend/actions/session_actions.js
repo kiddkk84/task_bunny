@@ -23,20 +23,20 @@ export const receiveErrors = errors => ({
 export const signup = user => dispatch => {
     return SessionAPIUtil.signup(user)
         .then(
-            user => dispatch(receiveCurrentUser(user)), error => 
-            dispatch(receiveErrors(error.responseJSON))
+            user => dispatch(receiveCurrentUser(user))
             )
 };
 
 
 export const login = user => dispatch => {
     return SessionAPIUtil.login(user)
-        .then(user => dispatch(receiveCurrentUser(user)), error =>
-            dispatch(receiveErrors(error.responseJSON))
+        .then(user => dispatch(receiveCurrentUser(user)), errors =>
+            dispatch(receiveErrors(errors.responseJSON))
             )
 };
 
 
 export const logout = () => dispatch => {
-    return SessionAPIUtil.logout().then(user => dispatch(logoutCurrentUser()))
+    return SessionAPIUtil.logout()
+    .then(user => dispatch(logoutCurrentUser()))
 };
