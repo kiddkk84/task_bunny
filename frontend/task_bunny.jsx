@@ -1,11 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {login, signup, logout} from "../frontend/util/session_api_util"
+// import {signup, logout} from "../frontend/util/session_api_util"
+import configureStore from './store/store';
+import {login} from "./actions/session_actions"
+import Root from "../frontend/components/root"
+
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
-    // window.login = login
+    const store = configureStore();
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    window.login = login 
     // window.signup = signup
     // window.logout = logout
 
-    ReactDOM.render(<h1>Welcome to taskbunny</h1>, root);
+    ReactDOM.render(<Root store={store} />, root);
 });
