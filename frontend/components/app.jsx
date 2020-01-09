@@ -20,7 +20,6 @@ import { AuthRoute } from '../util/route_util';
 const App = () => (
     <div>
         <header>
-            <h1>Task Bunny Rocks</h1>
             <GreetingContainer />       
 
         </header>

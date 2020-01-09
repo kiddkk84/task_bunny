@@ -1,5 +1,29 @@
-.login-signup {
-        display: flex;
-        border: 10px;
-        border-bottom:solid 1px #67b831;
-    }
+.main-nav {
+	display:flex;
+	justify-content: space-between;
+    padding: 5px 60px;
+    border-bottom: 1px solid black;
+}
+
+
+.img{
+    width: 150px;
+    height: 60px;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+.right-nav {
+	display: flex;
+    align-items: center;
+}
+
+#backgroundimage {
+    width: 500px;
+    height: 200px;
+    background-repeat: no-repeat;
+    display: block;
+    position: relative;
+    background-position: 0 500px;
+    
+}
