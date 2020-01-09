@@ -19,7 +19,8 @@ class SessionForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
-        this.props.processForm(user);
+        this.props.action(user);
+        this.props.history.push('/')
     }
 
     renderErrors() {
@@ -36,7 +37,7 @@ class SessionForm extends React.Component {
 
     render() {
         return (
-            <div className="login-form-container">
+            <div className="loginFormContainer">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     Welcome to TASKBUNNY!
                 <br />

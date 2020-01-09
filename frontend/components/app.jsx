@@ -1,5 +1,6 @@
 import React from 'react';
 // import { Provider } from 'react-redux';
+
 import {
     Route,
     Redirect,
@@ -14,16 +15,21 @@ import SignUpFormContainer from './session_form/signup_form_container';
 
 
 
-// import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { AuthRoute } from '../util/route_util';
 
 const App = () => (
     <div>
         <header>
-            <h1>task bunny rocks</h1>
-            <GreetingContainer />        
+            <h1>Task Bunny Rocks</h1>
+            <GreetingContainer />       
+
         </header>
-        <Route path="/login" component={LogInFormContainer} />
-        <Route path="/signup" component={SignUpFormContainer} />
+
+        <Switch>
+            <AuthRoute exact path="/login" component={LogInFormContainer} />
+            <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+        </Switch>
+
     </div>
 );
 

@@ -14,7 +14,7 @@ const mSTP = ({ errors }) => {
 
 const mDTP = dispatch => {
     return {
-        processForm: (user) => dispatch(login(user)),
+        action: (user) => dispatch(login(user)),
     };
 };
 
