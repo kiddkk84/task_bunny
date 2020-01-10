@@ -1,43 +1,31 @@
-.loginFormContainer {
-    background: url('loginbg.png');
+
+.gethelp {
+    background: url('background.png');
     background-repeat: no-repeat;
     background-size: 100%;
-    background-position: center;
-    background-position-x: 90%;
+    background-position: center top;
     height: 495px;
-    padding-bottom: 220px;
+    padding-top: 90px;
 }
-
-.login-form-box {
+.gethelp-header{
     max-width: 600px;
     background-color: white;
+    margin: auto;
     text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     border-radius: 6px;
-    font-size: medium;
+    font-size: xx-large;
     font-family: sans-serif;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    top: 2em;
+
 }
 
-
-.login-input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-.login-input[type=password] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+.gethelp-header p {
+    font-size: medium;
+    font-family: serif;
 }
 
-.session-submit{
+.gethelp-button {
 
     background: darkolivegreen;;
     border-radius: 4px;
@@ -59,6 +47,10 @@
     flex-shrink: 0;
     margin-left: 0.5rem;
     cursor: pointer;
-    text-transform: capitalize;
+}
 
+.gethelp-input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
 }

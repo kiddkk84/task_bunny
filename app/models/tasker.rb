@@ -1,0 +1,3 @@
+class Tasker < ApplicationRecord
+    
+end
