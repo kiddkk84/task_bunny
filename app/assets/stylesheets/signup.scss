@@ -1,17 +1,6 @@
-.loginFormContainer {
-    background: url('loginbg.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-    background-position-x: 90%;
-    height: 495px;
-    padding-bottom: 220px;
-}
-
-.login-form-box {
-    max-width: 600px;
-    color: darkolivegreen;
+.signup-form-box {max-width: 600px;
     background-color: white;
+    color: darkolivegreen;
     text-align: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -24,33 +13,25 @@
     top: 2em;
 }
 
-// .login-form-box label {
-//     // margin: 0;
-//     // padding: 0;
-//     // color: darkolivegreen;
-//     // padding-top: 2em;
-//     // padding-right: 2em;
-//     // width: 6em;
-//     text-align: center;
-//     // float: left;
-
-// }
 
 
-.login-input[type=text] {
-    width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-.login-input[type=password] {
+.signup-input[type=text]{
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
 }
 
-.session-submit {
+.signup-input[type=password]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
+
+.signup-submit{
 
     background:white;
     border-radius: 4px;
@@ -79,16 +60,13 @@
 
 }
 
-// .session-submit :hover{
-//     background-color: darkolivegreen;
-// }
 
 
 
-.loginerrors {
+.signuperrors {
     color:red;
     position: relative;
     top: 0px;
     text-align: center;
-    text-decoration: none;
+    white-space: pre-line;
 }

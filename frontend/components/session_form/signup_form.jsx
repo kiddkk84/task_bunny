@@ -29,21 +29,16 @@ class SignUpForm extends React.Component {
     render() {
         return (
             <div className="loginFormContainer">
-                <form onSubmit={this.handleSubmit} className="signupForm">
+                <form onSubmit={this.handleSubmit} className="signup-form-box">
 
 
                     <div className="signuperrors">
                         {this.props.errors}
                     </div>
 
-                    <div className="loginHeadersignup">
-                        <div className="iconlogin"></div>
-                        <p className="logoPart1login" >Task<span className="logoPart2login">bunny</span></p>
-                    </div>
-
-
-                    <div className="signupContainer">
+                    <div>
                         <label >First Name:
+                        <br/>
                     <input type="text"
                                 value={this.state.firstname}
                                 onChange={this.update('firstname')}
@@ -54,6 +49,7 @@ class SignUpForm extends React.Component {
 
 
                         <label >Last Name:
+                        <br />
                     <input type="text"
                                 value={this.state.lastname}
                                 onChange={this.update('lastname')}
@@ -63,6 +59,7 @@ class SignUpForm extends React.Component {
                         <br />
 
                         <label >Email:
+                        <br />
                         <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
@@ -72,6 +69,7 @@ class SignUpForm extends React.Component {
                         <br />
 
                         <label >Username:
+                        <br />
                         <input type="text"
                                 value={this.state.username}
                                 onChange={this.update('username')}
@@ -82,6 +80,7 @@ class SignUpForm extends React.Component {
 
 
                         <label >Password:
+                        <br />
                         <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}

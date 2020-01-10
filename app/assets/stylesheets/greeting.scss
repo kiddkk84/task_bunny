@@ -5,16 +5,22 @@
     border-bottom: 1px solid darkolivegreen;
 }
 
-
-.img{
+.main-nav img{
     width: 150px;
     height: 60px;
     overflow: hidden;
     margin-top: -6px;
 }
 
-.right-nav {
+.right-nav > ul {
 	display: flex;
     align-items: center;
+    list-style-type: none
+
 }
 
+.right-nav > ul > li {
+	margin: auto;
+    cursor: pointer;
+    text-align: center;
+}

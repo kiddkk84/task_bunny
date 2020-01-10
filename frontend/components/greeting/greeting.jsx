@@ -7,14 +7,16 @@ const Greeting = ({ currentUser, logout }) => {
     <div>
         <nav className="main-nav">
             <Link to="/">
-                    <img src="assets/logo.png" className="img"/>
+                    <img src="assets/logo.png"/>
             </Link>
-
+            <button>
                 <div className="right-nav">
-                <Link to="/login">Login</Link>
-                    &nbsp;or&nbsp;
-                <Link to="/signup" >Sign up!</Link>
-            </div>
+                <ul>  
+                    <li><Link to="/login">Log in</Link></li>
+    
+                    </ul> 
+                </div>
+            </button>
         </nav>
         
 

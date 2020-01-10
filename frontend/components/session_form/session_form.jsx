@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class SessionForm extends React.Component {
     constructor(props) {
@@ -21,11 +23,12 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.action(user);
         this.props.history.push('/')
+
     }
 
     renderErrors() {
         return (
-            <ul>
+            <ul className='loginerrors'>
                 {this.props.errors.map((error, i) => (
                     <li key={`error-${i}`}>
                         {error}
@@ -35,6 +38,7 @@ class SessionForm extends React.Component {
         );
     }
 
+
     render() {
         return (
             <div className="loginFormContainer">
@@ -42,7 +46,7 @@ class SessionForm extends React.Component {
                 <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
-                    <div className="login-form">
+                    <div>
                         <br />
                         <label>Username:
                             <br/>
@@ -63,7 +67,13 @@ class SessionForm extends React.Component {
                         </label>
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
+                
+                        <button className="session-submit"><Link to="/signup" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>Sign up</Link></button>
+
                     </div>
+                
+                    
+
                 </form>
             </div>
         );
