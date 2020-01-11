@@ -3,19 +3,113 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   movies = Movie.create([{   name: 'Star Wars' }, {   name: 'Lord of the Rings' }])
+#   Character.create(  name: 'Luke', movie: movies.first)
 
 
 
-# User.destroy_all
-# Artwork.destroy_all
-# ArtworkShare.destroy_all
-# Comment.destroy_all
-# Like.destroy_all
 
-# user1 = User.create!(username: 'robert')
-# user2 = User.create!(username: 'bill')
+User.destroy_all
+Category.destroy_all
+Task.destroy_all
+
+
+
+User.create!(
+    username: 'mtest1',
+    password: 'test123',
+    firstname: 'mike1',
+    lastname: 'test1',
+    email: 'mtest1@test.com'
+)
+
+User.create!(
+    username: 'mtest2',
+    password: 'test123',
+    firstname: 'mike2',
+    lastname: 'Joy',
+    email: 'mtest2@test.com'
+)
+
+User.create!(
+    username: 'mtest3',
+    password: 'test123',
+    firstname: 'mike3',
+    lastname: 'Man',
+    email: 'mtest3@test.com'
+)
+
+User.create!(
+    username: 'mtest4',
+    password: 'test123',
+    firstname: 'mike4',
+    lastname: 'Man',
+    email: 'mtest4@test.com'
+)
+
+User.create!(
+    username: 'mtest5',
+    password: 'test123',
+    firstname: 'mike5',
+    lastname: 'Man',
+    email: 'mtest5@test.com'
+)
+
+User.create!(
+    username: 'mtest6',
+    password: 'test123',
+    firstname: 'mike6',
+    lastname: 'Bos',
+    email: 'mtest6@test.com'
+)
+
+User.create!(
+    username: 'mtest7',
+    password: 'test123',
+    firstname: 'mike7',
+    lastname: 'Kim',
+    email: 'mtest7@test.com'
+)
+
+User.create!(
+    username: 'mtest8',
+    password: 'test123',
+    firstname: 'mike8',
+    lastname: 'Chap',
+    email: 'mtest8@test.com'
+)
+
+
+Category.create!(
+    category_name: 'Mounting'
+)
+
+Category.create!(
+    category_name: 'Moving'
+)
+
+Category.create!(
+    category_name: 'IKEA Furniture Assembly'
+)
+
+Category.create!(
+    category_name: 'Home Repairs'
+)
+
+Category.create!(
+    category_name: 'Cleaning'
+)
+
+Category.create!(
+    category_name: 'Heavy Lifting'
+)
+
+Category.create!(
+    category_name: 'Personal Assistant'
+)
+
+# user1 = User.create!(user  name: 'robert')
+# user2 = User.create!(user  name: 'bill')
 # artwork1 = Artwork.create!(title: 'nighthawks', image_url: 'google.com', artist_id: user1.id)
 # artwork2 = Artwork.create!(title: 'mona lisa', image_url: 'google1.com', artist_id: user2.id, favorite: true)
 # ArtworkShare.create!(artwork_id: artwork1.id, viewer_id: user2.id, favorite: true)

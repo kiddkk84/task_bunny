@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2020_01_10_222331) do
 
   create_table "taskers", force: :cascade do |t|
     t.integer "user_id", null: false
-    t.integer "task_id", null: false
     t.integer "rate", null: false
     t.integer "catgory_id", null: false
     t.string "city", null: false
@@ -36,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_222331) do
 
   create_table "tasks", force: :cascade do |t|
     t.integer "user_id", null: false
+    t.integer "tasker_id", null: false
     t.string "detail", null: false
     t.string "duration", null: false
     t.string "location", null: false

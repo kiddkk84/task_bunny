@@ -20,13 +20,14 @@ const App = () => (
     <div>
         <header>
             <GreetingContainer />  
+            
         </header>
         
 
         <Switch>
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <NeedHelp />
+            <AuthRoute component={NeedHelp}/>
         </Switch>
 
     </div>
