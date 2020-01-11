@@ -27,7 +27,7 @@ User.create!(
     username: 'mtest2',
     password: 'test123',
     firstname: 'mike2',
-    lastname: 'Joy',
+    lastname: 'test2',
     email: 'mtest2@test.com'
 )
 
@@ -35,7 +35,7 @@ User.create!(
     username: 'mtest3',
     password: 'test123',
     firstname: 'mike3',
-    lastname: 'Man',
+    lastname: 'test3',
     email: 'mtest3@test.com'
 )
 
@@ -43,7 +43,7 @@ User.create!(
     username: 'mtest4',
     password: 'test123',
     firstname: 'mike4',
-    lastname: 'Man',
+    lastname: 'test4',
     email: 'mtest4@test.com'
 )
 
@@ -51,7 +51,7 @@ User.create!(
     username: 'mtest5',
     password: 'test123',
     firstname: 'mike5',
-    lastname: 'Man',
+    lastname: 'test5',
     email: 'mtest5@test.com'
 )
 
@@ -59,7 +59,7 @@ User.create!(
     username: 'mtest6',
     password: 'test123',
     firstname: 'mike6',
-    lastname: 'Bos',
+    lastname: 'test6',
     email: 'mtest6@test.com'
 )
 
@@ -67,7 +67,7 @@ User.create!(
     username: 'mtest7',
     password: 'test123',
     firstname: 'mike7',
-    lastname: 'Kim',
+    lastname: 'test7',
     email: 'mtest7@test.com'
 )
 
@@ -75,7 +75,7 @@ User.create!(
     username: 'mtest8',
     password: 'test123',
     firstname: 'mike8',
-    lastname: 'Chap',
+    lastname: 'test7',
     email: 'mtest8@test.com'
 )
 
