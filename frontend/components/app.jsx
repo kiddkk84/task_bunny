@@ -12,22 +12,23 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import LogInFormContainer from './session_form/login_form_container';
 import SignUpFormContainer from './session_form/signup_form_container';
-import NeedHelp from './needhelp/needhelp'
+import NeedHelpFormContainer from './needhelp/needhelp_container'
 
 import { AuthRoute } from '../util/route_util';
 
 const App = () => (
     <div>
         <header>
-            <GreetingContainer />  
-            
+            <GreetingContainer /> 
         </header>
+        
         
 
         <Switch>
+            <Route exact path='/' component={NeedHelpFormContainer} />
             <AuthRoute exact path="/login" component={LogInFormContainer} />
             <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-            <AuthRoute component={NeedHelp}/>
+            
         </Switch>
 
     </div>

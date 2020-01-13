@@ -1,9 +1,20 @@
 import React from 'react';
+// import {categories} from './needhelp_container'
 
+class NeedHelpForm extends React.Component {
+    constructor(props){
+        super(props)
+    }
 
-class NeedHelp extends React.Component {
+    componentDidMount() {
+
+        this.props.fetchAll()
+    }
+
     render(){
+        const {categories} = this.props
         return (
+            
             <div className='gethelp'>
                 <h1 className='gethelp-header'>
                     Help around the home, at your fingertips
@@ -17,12 +28,14 @@ class NeedHelp extends React.Component {
                         <button type="submit" className='gethelp-button'>Get Help Today!</button>
                     </form>
                 </h1>
-            
-            </div>
+                {
+                    categories.map(category => category.category_name )
+                }
+            </div>  
         )
     }
 }
 
 
 
-export default NeedHelp
+export default NeedHelpForm
