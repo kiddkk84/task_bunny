@@ -6,7 +6,7 @@ class Api::TasksController < ApplicationController
     def create
         @task = Task.new(task_params)
         @task.user_id = current_user.id
-
+        render json: 'task create hit'
             if @task.save
                 render "api/tasks/show"
             else 

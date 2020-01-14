@@ -9,28 +9,62 @@ const Greeting = ({ currentUser, logout }) => {
             <Link to="/">
                     <img src="assets/logo.png"/>
             </Link>
-            <button>
                 <div className="right-nav">
                 <ul>  
-                    <li><Link to="/login">Log in</Link></li>
-    
-                    </ul> 
+                        <li><Link to="/" style={{ textDecoration: 'none', color: 'darkolivegreen' }} >Services</Link></li>
+                        <li><Link to="/login" style={{ textDecoration: 'none', color: 'darkolivegreen' }} >Log in</Link></li>
+                        <button>Become a Tasker</button>
+                </ul> 
                 </div>
-            </button>
         </nav>
         
 
     </div>
     );
     const personalGreeting = () => (
-        <hgroup>
-            <h2>Hello, {currentUser.username}!</h2>
-            <button onClick={logout}>Log Out</button>
-        </hgroup>
-    );
 
-    return currentUser ? personalGreeting() : sessionLinks();
-};
+    <div>
+        <nav className='main-nav'>
+                <Link to="/">
+                    <img src="assets/logo.png" />
+                </Link>
+            <div className="right-nav">
+        
+            <ul>
+            <li>
+                
+                <Link to="/login" style={{ textDecoration: 'none', color: 'darkolivegreen' }} >
+                    Free Credit
+                </Link></li>
+                
+            <li>
+                <Link to="/createTask" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>
+                    Book a Task
+                </Link></li>
+            
+            <li>
+                <Link to="/tasks" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>
+                    My Tasks
+                </Link></li>
+            <li>
+                <Link to="/tasks" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>
+                    Account
+                </Link></li>
+                        <button>
+                            <div className="menustaskercomp" onClick={logout}>Log Out</div>
+                        </button>
+            </ul>
+                
+                </div>
+    </nav>
+    
 
-
-export default Greeting;
+    </div>
+            
+                );      
+            
+                return currentUser ? personalGreeting() : sessionLinks();
+            };
+            
+            
+            export default Greeting;

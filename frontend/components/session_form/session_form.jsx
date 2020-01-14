@@ -71,7 +71,6 @@ class SessionForm extends React.Component {
                         <button className="session-submit"><Link to="/signup" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>Sign up</Link></button>
 
                     </div>
-                
                     
 
                 </form>

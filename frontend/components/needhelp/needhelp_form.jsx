@@ -18,7 +18,8 @@ class NeedHelpForm extends React.Component {
             <div className='gethelp'>
                 <h1 className='gethelp-header'>
                     Help around the home, at your fingertips
-                    <p>
+                    <p>                    
+                    <br />
                     You don't always have to DIY. 
                     Get help from thousands of trusted Taskers for everything from home repairs to cleaning.
                     </p>
