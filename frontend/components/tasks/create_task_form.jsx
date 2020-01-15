@@ -16,9 +16,10 @@ class taskCreate extends React.Component{
     render(){
         const { categories } = this.props
     return (
-    <div>
+    <div>   
+        
             {
-                categories.map(category => category.category_name)
+                categories.map(category => <Link>{category.category_name}</Link>)
             }
     </div>
 

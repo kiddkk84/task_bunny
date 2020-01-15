@@ -54,3 +54,27 @@
     margin: 8px 0;
     box-sizing: border-box;
 }
+
+.catgory {
+    display: inline-flex;
+    flex-wrap: wrap;
+    list-style: square;
+    background:white;
+    border-radius: 4px;
+    color: darkolivegreen;
+    font-size: 1rem;
+    line-height: 22px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    font-weight: normal;
+    // margin-left: 0.5rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: darkolivegreen;
+    margin: 5px;
+
+}

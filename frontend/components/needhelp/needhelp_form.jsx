@@ -20,18 +20,27 @@ class NeedHelpForm extends React.Component {
                     Help around the home, at your fingertips
                     <p>                    
                     <br />
+                        {
+                            categories.map(category => <li key={category.id}className="catgory">{category.category_name}</li>)
+                        }
+                        <br />
+                        <br/>
+
                     You don't always have to DIY. 
                     Get help from thousands of trusted Taskers for everything from home repairs to cleaning.
                     </p>
-                    <br/>
+
+                    
                     <form>
                         <input type="text" className='gethelp-input'/>
                         <button type="submit" className='gethelp-button'>Get Help Today!</button>
                     </form>
                 </h1>
-                {
-                    categories.map(category => category.category_name )
+                
+                {/* {
+                    categories.map(category => <ul className="catgory">{category.category_name}</ul> )
                 }
+                 */}
             </div>  
         )
     }
