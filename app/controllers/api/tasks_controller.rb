@@ -1,16 +1,22 @@
 class Api::TasksController < ApplicationController
     def index 
-        @tasks = Task.find_by(user_id: current_user.id)
+        @tasks = Task.where(user_id: current_user.id)
+        
+        render 'api/tasks/index'
+        # render json: @tasks
     end 
 
     def create
+        
         @task = Task.new(task_params)
         @task.user_id = current_user.id
-        render json: 'task create hit'
-            if @task.save
+        # @task.category_id = params[:category_id]
+            if @task.save!
                 render "api/tasks/show"
+                # render @task 
             else 
                 render json: ["missing tasks info"]
+
             end 
         end 
 
@@ -29,6 +35,6 @@ class Api::TasksController < ApplicationController
 
 private 
     def task_params
-        params.require(:task).permit(:detail, :duration, :location)
+        params.require(:task).permit(:category_id, :detail, :duration, :location, :tasker_id)
     end 
 end

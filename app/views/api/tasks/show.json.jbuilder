@@ -1,1 +1,1 @@
-json.extract! @task, :id, :category, :location, :detail, :duration
+json.extract! @task, :id, :location, :detail, :duration, :category_id

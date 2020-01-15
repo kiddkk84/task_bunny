@@ -13,8 +13,6 @@ User.destroy_all
 Category.destroy_all
 Task.destroy_all
 
-
-
 User.create!(
     username: 'mtest1',
     password: 'test123',

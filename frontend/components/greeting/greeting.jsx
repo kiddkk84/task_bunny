@@ -62,9 +62,8 @@ const Greeting = ({ currentUser, logout }) => {
     </div>
             
                 );      
-            
-                return currentUser ? personalGreeting() : sessionLinks();
-            };
-            
-            
-            export default Greeting;
+
+    return currentUser ? personalGreeting() : sessionLinks();
+};
+
+export default Greeting;
