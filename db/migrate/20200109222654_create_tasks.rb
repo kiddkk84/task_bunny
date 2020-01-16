@@ -3,7 +3,7 @@ class CreateTasks < ActiveRecord::Migration[5.2]
     create_table :tasks do |t|
       t.integer :user_id
       t.integer :tasker_id
-      t.integer :category_id
+      t.string :category
       t.string :detail
       t.string :duration
       t.string :location

@@ -1,5 +1,7 @@
 import React from 'react';
 // import {categories} from './needhelp_container'
+import { Link } from 'react-router-dom';
+import CategoryIndexItem from './needHelp_index_container'
 
 class NeedHelpForm extends React.Component {
     constructor(props){
@@ -21,7 +23,7 @@ class NeedHelpForm extends React.Component {
                     <p>                    
                     <br />
                         {
-                            categories.map(category => <li key={category.id}className="catgory">{category.category_name}</li>)
+                            categories.map(category => <CategoryIndexItem key={category.id} category={category} />)
                         }
                         <br />
                         <br/>

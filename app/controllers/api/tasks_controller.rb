@@ -35,6 +35,6 @@ class Api::TasksController < ApplicationController
 
 private 
     def task_params
-        params.require(:task).permit(:category_id, :detail, :duration, :location, :tasker_id)
+        params.require(:task).permit(:category, :detail, :duration, :location, :tasker_id)
     end 
 end

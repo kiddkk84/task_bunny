@@ -6,9 +6,8 @@ import { fetchAllCategories } from '../../actions/category_actions';
 import taskCreate from './create_task_form'
 
 const mSTP = (state) => ({
-    categories: Object.values(state.categories)
-
-
+    categories: Object.values(state.categories), 
+    
 });
 
 const mDTP = dispatch => ({    
