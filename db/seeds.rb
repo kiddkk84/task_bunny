@@ -14,6 +14,15 @@ Category.destroy_all
 Task.destroy_all
 
 User.create!(
+  username: 'Guest',
+  password: 'test123',
+  firstname: 'Hello',
+  lastname: 'World',
+  email: 'guest.password@test.com'
+)
+
+
+User.create!(
     username: 'mtest1',
     password: 'test123',
     firstname: 'mike1',
@@ -53,21 +62,6 @@ User.create!(
     email: 'mtest5@test.com'
 )
 
-User.create!(
-    username: 'mtest6',
-    password: 'test123',
-    firstname: 'mike6',
-    lastname: 'test6',
-    email: 'mtest6@test.com'
-)
-
-User.create!(
-    username: 'mtest7',
-    password: 'test123',
-    firstname: 'mike7',
-    lastname: 'test7',
-    email: 'mtest7@test.com'
-)
 
 User.create!(
     username: 'mtest8',
@@ -105,4 +99,5 @@ Category.create!(
 Category.create!(
     category_name: 'Personal Assistant'
 )
+
 

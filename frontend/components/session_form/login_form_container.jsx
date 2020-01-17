@@ -13,8 +13,11 @@ const mSTP = ({ errors }) => {
 };
 
 const mDTP = dispatch => {
+    const demouser = { username: "Guest", password: "test123" };
+
     return {
         action: (user) => dispatch(login(user)),
+        demoLogin: () => dispatch(login(demouser)),
     };
 };
 

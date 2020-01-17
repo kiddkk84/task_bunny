@@ -15,6 +15,7 @@ import SignUpFormContainer from './session_form/signup_form_container';
 import NeedHelpFormContainer from './needhelp/needhelp_container'
 import createTaskContainer from './tasks/create_task_container'
 import MapContainer from '../components/tasker/tasker_form'
+import TasksIndexContainer from '../components/tasks/tasks_index_container'
 
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -33,6 +34,8 @@ const App = () => (
             <ProtectedRoute exact path='/createTask/:category_name/' component={createTaskContainer}/>
             <ProtectedRoute exact path='/createTask/' component={createTaskContainer} />
             <ProtectedRoute exact path='/tasker' component={MapContainer} /> 
+            <ProtectedRoute exact path='/myTasks' component={TasksIndexContainer} /> 
+
         </Switch>
 
     </div>

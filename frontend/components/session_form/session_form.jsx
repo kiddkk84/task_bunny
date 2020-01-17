@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../footer/footer'
+
 
 
 class SessionForm extends React.Component {
@@ -10,6 +12,8 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemo = this.handleDemo.bind(this);
+
     }
 
     update(field) {
@@ -24,6 +28,14 @@ class SessionForm extends React.Component {
         this.props.action(user);
         this.props.history.push('/')
 
+    }
+
+
+    handleDemo() {
+        return (e) => {
+            e.preventDefault();
+            this.props.demoLogin();
+        };
     }
 
     renderErrors() {
@@ -69,11 +81,14 @@ class SessionForm extends React.Component {
                         <input className="session-submit" type="submit" value={this.props.formType} />
                 
                         <Link className="session-submit" to="/signup"  style={{textDecoration: 'none'}}>Sign up</Link>
+                        <button className="session-submit" onClick={this.handleDemo()}>Demo</button>
 
                     </div>
-                    
+
 
                 </form>
+
+
             </div>
         );
     }

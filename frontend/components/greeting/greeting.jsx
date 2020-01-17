@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import Footer from '../footer/footer'
 
 const Greeting = ({ currentUser, logout }) => {
     const sessionLinks = () => (
@@ -43,7 +43,7 @@ const Greeting = ({ currentUser, logout }) => {
                 </Link></li>
             
             <li>
-                <Link to="/tasks" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>
+                <Link to="/myTasks" style={{ textDecoration: 'none', color: 'darkolivegreen' }}>
                     My Tasks
                 </Link></li>
             <li>
@@ -56,9 +56,8 @@ const Greeting = ({ currentUser, logout }) => {
             </ul>
                 
                 </div>
-    </nav>
+        </nav>
     
-
     </div>
             
                 );      

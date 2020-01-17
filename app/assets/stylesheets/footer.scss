@@ -1,0 +1,31 @@
+.footerbottom{
+    background-color: darkolivegreen;
+    height: 80px;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.icons{
+    width: 10%;
+    
+    // padding-top: 60px;
+    display: inline-flex;
+    justify-content: flex-start;
+    justify-content: space-evenly;
+    }
+
+
+.footertext{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: #B5BDC6;
+    padding-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+.linkedin{
+    color: white;
+    font-size: x-large;
+}

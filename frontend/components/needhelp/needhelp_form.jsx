@@ -1,17 +1,22 @@
 import React from 'react';
-// import {categories} from './needhelp_container'
 import { Link } from 'react-router-dom';
 import CategoryIndexItem from './needHelp_index_container'
+import Footer from '../footer/footer'
+import { login } from '../../actions/session_actions';
+
 
 class NeedHelpForm extends React.Component {
     constructor(props){
         super(props)
+
     }
 
     componentDidMount() {
 
         this.props.fetchAll()
     }
+
+
 
     render(){
         const {categories} = this.props
@@ -33,16 +38,11 @@ class NeedHelpForm extends React.Component {
                     </p>
 
                     
-                    <form>
-                        <input type="text" className='gethelp-input'/>
                         <button type="submit" className='gethelp-button'>Get Help Today!</button>
-                    </form>
                 </h1>
-                
-                {/* {
-                    categories.map(category => <ul className="catgory">{category.category_name}</ul> )
-                }
-                 */}
+                <br/>
+                <Footer />
+
             </div>  
         )
     }

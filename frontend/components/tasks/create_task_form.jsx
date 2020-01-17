@@ -13,12 +13,15 @@ class taskCreate extends React.Component{
             detail: ""
         };
     this.handleSubmit = this.handleSubmit.bind(this);
+        // this.myFunction = this.myFunction.bind(this);
 
     }
 
     handleSubmit(e) {
         e.preventDefault();
         this.props.newTask(this.state);
+        this.props.history.push('/myTasks')
+
     }
 
     update(field) {
@@ -31,6 +34,15 @@ class taskCreate extends React.Component{
 
     }
 
+    // myFunction(){
+    //     const x = document.getElementById('hid');
+    //     if (x.style.display === "none") {
+    //         x.style.display = "block";
+    //     } else {
+    //         x.style.display = "none";
+    //     }
+    // }
+
 
     render(){
         const { categories } = this.props
@@ -38,13 +50,17 @@ class taskCreate extends React.Component{
     return (
     <div>   
             <p>Book Your Next Task</p>  
+            {/* <button onClick={this.myFunction()} > toggle </button>   */}
 
-        <header>
-            {
-                categories.map(category => <CategoryIndexItem key={category.id} category={category}/>)
-            }
 
-        </header>
+        <div id="hid">
+
+
+                {
+                    categories.map(category => <CategoryIndexItem key={category.id}  category={category} />)
+                }
+
+        </div>
 
             <form onSubmit={this.handleSubmit}>
                 <header>{this.props.match.params.category_name}</header>
