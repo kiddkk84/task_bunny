@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from "../footer/footer";
+import TaskIndexItem from './task_index_item'
 
 class TasksIndex extends React.Component {
     constructor(props) {
@@ -19,24 +20,29 @@ class TasksIndex extends React.Component {
     // }
 
     render() {
-        const tasks = this.props.tasks
+        const { tasks, deleteTask } = this.props
 
         return (
-            tasks.map(task=>{
-                return(
+            <div>
+            {
+                    tasks.map(task => <TaskIndexItem key={task.id} task={task} deleteTask={deleteTask}/>)
+            }
+            </div>
+            //     {
+            //     return(
                     
-                        <div key={task.id} className='tasklist'>
-                            <br/>
-                            <li>Location:{task.location}</li>
-                            <li>Details: {task.detail}</li>
-                            <li>Duration: {task.duration}</li>
-                            <br/>
-                        </div>
+            //             <div key={task.id} className='tasklist'>
+            //                 <br/>
+            //                 <li>Location:{task.location}</li>
+            //                 <li>Details: {task.detail}</li>
+            //                 <li>Duration: {task.duration}</li>
+            //                 <br/>
+            //             </div>
                 
-                    )
-            })
-            )
-    }
+            //         )
+            // }
+        )
+        }
 
 }
 

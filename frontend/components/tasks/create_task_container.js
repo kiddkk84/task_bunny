@@ -7,7 +7,6 @@ import taskCreate from './create_task_form'
 
 const mSTP = (state) => ({
     categories: Object.values(state.categories), 
-    
 });
 
 const mDTP = dispatch => ({    
